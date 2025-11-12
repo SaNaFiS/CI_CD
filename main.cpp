@@ -15,6 +15,12 @@ int main() {
     std::cout << "Max: " << find_max(numbers) << std::endl;
     std::cout << "Min: " << find_min(numbers) << std::endl;
     std::cout << "Avg: " << average(numbers) << std::endl;
+    std::vector<int> reversed = reverse_vector(numbers);
+    std::cout << "Reversed: ";
+    for (int num : reversed) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
     
     return 0;
 }
