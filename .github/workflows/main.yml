@@ -1,7 +1,8 @@
 name: C++ Build Test
 
 on: 
-  workflow_dispatch
+  push:
+  workflow_dispatch:
 
 jobs:
   build-cpp:
@@ -27,9 +28,16 @@ jobs:
         g++ -c math_operations.cpp -o math_operations.o
         g++ -c main.cpp -o main.o
         g++ math_operations.o main.o -o myapp
+        g++ math_operations.o test_math_operations.o -o mytest
         ls -la
         
-    # Шаг 4: Запуск приложения
+    # Шаг 4: Запуск тестов
+    - name: Run tests
+      run: |
+        echo "Запускаем приложение:"
+        ./mytest
+        
+    # Шаг 5: Запуск приложения
     - name: Run application
       run: |
         echo "Запускаем приложение:"
