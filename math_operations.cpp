@@ -26,3 +26,8 @@ int find_min(const std::vector<int>& numbers) {
     }
     return min_val;
 }
+
+double average(const std::vector<int>& numbers) {
+    if (numbers.empty()) return 0.0;
+    return static_cast<double>(sum(numbers)) / numbers.size();
+}

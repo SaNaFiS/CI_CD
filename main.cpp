@@ -14,6 +14,7 @@ int main() {
     std::cout << "Sum: " << sum(numbers) << std::endl;
     std::cout << "Max: " << find_max(numbers) << std::endl;
     std::cout << "Min: " << find_min(numbers) << std::endl;
+    std::cout << "Avg: " << average(numbers) << std::endl;
     
     return 0;
 }
