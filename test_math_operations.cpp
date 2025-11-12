@@ -26,13 +26,21 @@ void test_empty_vector() {
     assert(sum(numbers) == 0);
     assert(find_max(numbers) == 0);
     assert(find_min(numbers) == 0);
+    assert(average(numbers) == 0.0);
     std::cout << "Test empty vector: PASSED\n";
+}
+
+void test_average() {
+    std::vector<int> numbers = {1, 2, 3, 4, 5};
+    assert(average(numbers) == 3.0);
+    std::cout << "Test average: PASSED\n";
 }
 
 int main() {
     test_sum();
     test_find_max();
     test_find_min();
+    test_average();
     test_empty_vector();
     
     std::cout << "All tests passed successfully!\n";
