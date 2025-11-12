@@ -1,0 +1,36 @@
+name: C++ Build Test
+
+on: 
+  workflow_dispatch
+
+jobs:
+  build-cpp:
+    name: Build C++ Application
+    runs-on: ubuntu-latest
+    
+    steps:
+    # Шаг 1: Получить код из репозитория
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    # Шаг 2: Установить компилятор
+    - name: Install C++ compiler
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y g++ make
+        g++ --version
+        
+    # Шаг 3: Компиляция
+    - name: Compile source files
+      run: |
+        echo "Компилируем файлы..."
+        g++ -c math_operations.cpp -o math_operations.o
+        g++ -c main.cpp -o main.o
+        g++ math_operations.o main.o -o myapp
+        ls -la
+        
+    # Шаг 4: Запуск приложения
+    - name: Run application
+      run: |
+        echo "Запускаем приложение:"
+        ./myapp
