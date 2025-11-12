@@ -27,6 +27,7 @@ jobs:
         echo "Компилируем файлы..."
         g++ -c math_operations.cpp -o math_operations.o
         g++ -c main.cpp -o main.o
+        g++ -c test_math_operations.cpp -o test_math_operations.o
         g++ math_operations.o main.o -o myapp
         g++ math_operations.o test_math_operations.o -o mytest
         ls -la
