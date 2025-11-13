@@ -32,5 +32,6 @@ jobs:
       run: |
         git config --local user.email "fischer.sascha333@gmail.com"
         git config --local user.name "SaNaFiS"
+        git add ./html ./latex
         git commit -m "docs: auto-generate documentation"
         git push
