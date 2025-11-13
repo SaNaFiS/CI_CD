@@ -1,3 +1,10 @@
+/**
+ * @file main.cpp
+ * @brief Print results of math_operations
+ * @author Alexandr Fisher
+ * @version 1.0
+ */
+
 #include "math_operations.h"
 #include <iostream>
 #include <vector>

@@ -1,3 +1,10 @@
+/**
+ * @file math_operations.cpp
+ * @brief Implementation of mathematical operations
+ * @author Alexandr Fisher
+ * @version 1.0
+ */
+
 #include "math_operations.h"
 #include <climits>
 #include <algorithm>
