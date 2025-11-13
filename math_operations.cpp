@@ -1,5 +1,13 @@
+/**
+ * @file math_operations.cpp
+ * @brief Implementation of mathematical operations
+ * @author Alexandr Fisher
+ * @version 1.0
+ */
+
 #include "math_operations.h"
 #include <climits>
+#include <algorithm>
 
 int sum(const std::vector<int>& numbers) {
     int total = 0;
@@ -30,4 +38,10 @@ int find_min(const std::vector<int>& numbers) {
 double average(const std::vector<int>& numbers) {
     if (numbers.empty()) return 0.0;
     return static_cast<double>(sum(numbers)) / numbers.size();
+}
+
+std::vector<int> reverse_vector(const std::vector<int>& numbers) {
+    std::vector<int> reversed = numbers;
+    std::reverse(reversed.begin(), reversed.end());
+    return reversed;
 }
