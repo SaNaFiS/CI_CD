@@ -2,12 +2,12 @@
  * @file math_operations.h
  * @brief Header file for mathematical operations on vectors
  * @author Alexandr Fisher
- * @version 1.0
+ * @version 1.1
  */
 #include <vector>
 
 /**
- * @brief Calculates the sum of all elements in a vector
+ * @brief Calculates the sum of all elements in a vector (Данный комментарий необходим для проверки изменения документации)
  * @param numbers Vector of integers
  * @return Sum of all elements in the vector
  * @note Returns 0 if the vector is empty
