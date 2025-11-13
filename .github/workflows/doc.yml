@@ -3,6 +3,9 @@ name: Auto Generate Documentation
 on:
   push:
 
+permissions:
+  contents: write  # Разрешаем запись в репозиторий
+
 jobs:
   generate-docs:
     runs-on: ubuntu-latest
